@@ -146,7 +146,7 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>../unit-test-coverage/${project.artifactId}/</outputDirectory>
+                            <outputDirectory>unit-test-coverage/${project.artifactId}/</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
