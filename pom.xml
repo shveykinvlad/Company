@@ -22,7 +22,7 @@
         <javax-validation.version>2.0.1.Final</javax-validation.version>
         <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
         <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
-        <checkstyle.version>8.16</checkstyle.version>
+        <checkstyle.version>8.29</checkstyle.version>
         <!-- Liquibase -->
         <liquibase.version>3.8.5</liquibase.version>
         <liquibase.host>localhost</liquibase.host>
