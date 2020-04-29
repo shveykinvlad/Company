@@ -1,0 +1,33 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="Example" id="2020-01-01-01-create-sequence-example">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sequenceExists sequenceName="example_id_seq"/>
+            </not>
+        </preConditions>
+        <createSequence sequenceName="example_id_seq"/>
+    </changeSet>
+
+    <changeSet author="Example" id="2020-01-01-02-create-table-example">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="example"/>
+            </not>
+        </preConditions>
+        <createTable tableName="example">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="id_example_pkey"/>
+            </column>
+            <column name="text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="creation_timestamp" type="TIMESTAMP WITH TIME ZONE" defaultValueComputed="current_timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
