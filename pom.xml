@@ -20,6 +20,7 @@
         <!-- Dependencies -->
         <orika.version>1.8.0</orika.version>
         <javax-validation.version>2.0.1.Final</javax-validation.version>
+        <testcontainers.version>1.10.2</testcontainers.version>
         <!-- Plugins -->
         <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
         <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
@@ -73,6 +74,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${testcontainers.version}</version>
         </dependency>
     </dependencies>
 

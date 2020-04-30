@@ -11,6 +11,6 @@ import javax.validation.Valid;
 public interface ExampleResourceApi {
 
     @PostMapping
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     ExampleDto save(@RequestBody @Valid ExampleDto exampleDto);
 }
